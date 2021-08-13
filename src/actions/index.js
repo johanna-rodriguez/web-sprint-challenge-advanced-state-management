@@ -1,5 +1,7 @@
 import axios from "axios";
 
+
+//fetch to the API to get the smurfs array
 export const fetchSmurfs = () => {
   return (dispatch) => {
     dispatch(fetchStart());

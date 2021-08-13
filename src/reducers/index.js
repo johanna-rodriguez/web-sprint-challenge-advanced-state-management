@@ -5,7 +5,7 @@ export const initialState = {
   loading: false,
   errorMessage: "",
 };
-
+// reducer to handle declare actions
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_ERROR:

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { setError, addSmurf } from "./../actions";
 
 const AddForm = (props) => {
-  const { smurfs, errorMessage } = props;
+  const {errorMessage } = props;
 
   const [state, setState] = useState({
     name: "",
@@ -87,13 +87,13 @@ const AddForm = (props) => {
   );
 };
 
+//props that are been passed to the add form component
 const mapStateToProps = (state) => {
   return {
-    smurfs: state.smurfs,
     errorMessage: state.errorMessage,
   };
 };
-
+// redux connection for add form component
 export default connect(mapStateToProps, { setError, addSmurf })(AddForm);
 
 //Task List:
