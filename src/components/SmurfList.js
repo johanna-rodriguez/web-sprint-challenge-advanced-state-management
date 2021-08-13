@@ -4,7 +4,7 @@ import { fetchFail } from "./../actions";
 import { connect } from "react-redux";
 
 const SmurfList = (props) => {
-  const { smurf, loading } = props;
+  const { smurfs, loading } = props;
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -12,7 +12,7 @@ const SmurfList = (props) => {
 
   return (
     <div className="listContainer">
-      {smurf.map((e) => (
+      {smurfs.map((e) => (
         <Smurf smurf={e} />
       ))}
     </div>
@@ -21,7 +21,7 @@ const SmurfList = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    smurf: state.smurfs,
+    smurfs: state.smurfs,
     loading: state.loading,
   };
 };
